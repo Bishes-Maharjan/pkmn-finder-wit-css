@@ -1,0 +1,146 @@
+<html>
+  <link href='pkmn.css'></link>
+<head> </head>
+<body>
+    <div class="container">
+        <h1>Pokémon Finder</h1>
+        <input type="text" id="search-input" placeholder="Enter Pokémon name or ID">
+        <button id="search-button">Search</button>
+      
+        <div id="forimg"></div>
+        
+        <div class="info">
+         <span id="pokemon-name">Name: </span>
+          <span id="pokemon-id">ID: </span>
+          <span id="height">Height: </span>
+          <span id="weight">Weight: </span>
+          <span id="types">Type(s): </span>
+        </div>
+      
+        <div class="stats">
+          <div class="stat" id="hp"></div>
+          <div class="stat" id="attack"></div>
+          <div class="stat" id="defense"></div>
+          <div class="stat" id="special-attack"></div>
+          <div class="stat" id="special-defense"></div>
+          <div class="stat" id="speed"></div>
+        </div>
+      </div>
+  </body>
+<style>
+    /* General Reset */
+body, h1, h2, p, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Background and Fonts */
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #FFDE00, #E3350D);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Main Container */
+  .container {
+    max-width: 600px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Header */
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #E3350D;
+  }
+  
+  #search-input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #E3350D;
+    border-radius: 20px;
+    margin-bottom: 10px;
+  }
+  
+  #search-button {
+    background-color: #FFDE00;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: #E3350D;
+    transition: background-color 0.3s ease;
+  }
+  
+  #search-button:hover {
+    background-color: #E3350D;
+    color: #FFDE00;
+  }
+  
+  /* Image */
+  #forimg img {
+    width: 150px;
+    height: 150px;
+    margin: 10px 0;
+    border: 2px solid #FFDE00;
+    border-radius: 50%;
+  }
+  
+  /* Pokémon Info */
+  .info {
+    margin: 20px 0;
+  }
+  
+  .info span {
+    display: block;
+    font-weight: bold;
+    margin: 5px 0;
+    font-size: 18px;
+  }
+  
+  /* Stats */
+  .stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .stat {
+    background-color: #FFDE00;
+    border: 2px solid #E3350D;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin: 5px;
+    font-weight: bold;
+    text-transform: capitalize;
+    flex: 1 0 30%;
+    text-align: center;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .stats {
+      flex-direction: column;
+    }
+  
+    .stat {
+      flex: 1 0 100%;
+    }
+  }
+</style>
+<script src="pkmn.js"> </script>
+</html>
